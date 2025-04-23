@@ -37,14 +37,14 @@ plt.show()
 //ген алгоритмы
 import random
 
-# Количество особей в каждом поколении
+# количество особей в каждом поколении
 POPULATION_SIZE = 100
 
-# Валидные гены
+# валидные гены
 GENES = '''abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP
 QRSTUVWXYZ 1234567890, .-;:_!"#%&/()=?@${[]}'''
 
-# Целевая строка для генерации
+# целевая строка для генерации
 TARGET = "In principio erat Verbum 2000, and more"
 
 class Individual(object):
@@ -83,13 +83,11 @@ class Individual(object):
 
 			prob = random.random()
 
-			# если вероятность меньше 0,45, берем ген
-			# от родителя 1
+			# если вероятность меньше 0,45, берем ген родителя 1
 			if prob < 0.45:
 				child_chromosome.append(gp1)
 
-			# если вероятность между 0.45 и 0.90, берем
-			# ген от родителя 2
+			# если вероятность между 0.45 и 0.90, берем ген от родителя 2
 			elif prob < 0.90:
 				child_chromosome.append(gp2)
 
@@ -112,17 +110,14 @@ class Individual(object):
 			if gs != gt: fitness+= 1
 		return fitness
 
-# Driver code
 def main():
 	global POPULATION_SIZE
 
-	#Текущее поколение
 	generation = 1
 
 	found = False
 	population = []
 
-	# Новое поколение
 	for _ in range(POPULATION_SIZE):
 				gnome = Individual.create_gnome()
 				population.append(Individual(gnome))
