@@ -14,6 +14,8 @@ url = 'https://people.sc.fsu.edu/~jburkardt/data/csv/...'
 data = pd.read_csv(url)
 
 print(data.head())
+
+# вывод
 //  Month   "1958"   "1959"   "1960"
 // 0   JAN      340      360      417
 // 1   FEB      318      342      391
