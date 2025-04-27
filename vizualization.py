@@ -1,6 +1,3 @@
-print("Hello World!")
-// Hello World!
-
 list = np.random.randint(1, 101, size = 10)
 
 def res(list):
